@@ -17,6 +17,10 @@ public class WooCommerce {
         this.URL = URL;
     }
 
+    public String getAuth(){
+        return "?consumer_key="+ consumerKey + "&consumer_secret=" + consumerSecret;
+    }
+
     public Product createProduct(){
         return new Product();
     }
