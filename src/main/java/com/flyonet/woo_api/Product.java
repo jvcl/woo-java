@@ -17,20 +17,27 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package com.flyonet.woo_api;
 
 public class Product {
     private int id;
-    private String title;
-    private float price;
+    private String name;
+    private String slug;
+    private String permalink;
+    private String type;
+    private String status;
+    private boolean featured;
+    private String description;
+    private String sku;
+    private String price;
+    private String regular_price;
+    private String sale_price;
 
     Product(){
 
     }
-    Product(int id, String title, float price) {
-        this.id = id;
-        this.title = title;
+    Product(String title, String price) {
+        this.name = title;
         this.price = price;
     }
 
@@ -43,18 +50,18 @@ public class Product {
     }
 
     public String getTitle() {
-        return title;
+        return name;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.name = title;
     }
 
-    public float getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }
